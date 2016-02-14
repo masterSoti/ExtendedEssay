@@ -35,7 +35,7 @@ def fit(xdata, ydata):
     sse = numpy.array([])
     count = 0
     primeParameter = a
-    smallest = 0
+    smallest = findSSE(xdata, ydata, equation, a)
     a[0] = 0
     # beginning of the while loops
     while a[0] < 100:
