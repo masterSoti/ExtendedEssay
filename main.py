@@ -10,7 +10,9 @@ def main():
     # TODO: make a graph with the array of constant the fit.fit returns
     yfunc = xdata
     for i in xdata:
-        yfunc = fit.equation(i, a)
+        yfunc[i - 1] = fit.equation(i, a)
+    print a
+    print yfunc
 
 
 if __name__ == "__main__":
